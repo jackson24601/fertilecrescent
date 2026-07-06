@@ -1,0 +1,125 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: "Crimson Pro", Georgia, serif;
+  background: #1a0f08;
+}
+
+.landing {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#scene {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  pointer-events: none;
+  text-align: center;
+  padding: 2rem;
+}
+
+.title {
+  font-family: "Cinzel", "Times New Roman", serif;
+  font-size: clamp(2.5rem, 8vw, 5.5rem);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #f4e4c8;
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.6),
+    0 0 40px rgba(255, 200, 120, 0.35),
+    0 0 80px rgba(255, 160, 60, 0.2);
+  animation: title-glow 4s ease-in-out infinite alternate;
+}
+
+.subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.35rem);
+  font-style: italic;
+  color: rgba(244, 228, 200, 0.75);
+  letter-spacing: 0.2em;
+  text-transform: lowercase;
+  margin-bottom: 1.5rem;
+}
+
+.begin-btn {
+  pointer-events: auto;
+  font-family: "Cinzel", "Times New Roman", serif;
+  font-size: clamp(0.95rem, 2vw, 1.15rem);
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #2a1a0a;
+  background: linear-gradient(180deg, #e8c87a 0%, #c9a04a 45%, #a67c2e 100%);
+  border: 2px solid rgba(255, 230, 180, 0.5);
+  border-radius: 4px;
+  padding: 1rem 2.75rem;
+  cursor: pointer;
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.begin-btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(180deg, #f0d48a 0%, #d4ad5a 45%, #b88a38 100%);
+  box-shadow:
+    0 8px 28px rgba(0, 0, 0, 0.5),
+    0 0 24px rgba(255, 200, 100, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.begin-btn:active {
+  transform: translateY(0);
+  box-shadow:
+    0 2px 12px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.begin-btn:focus-visible {
+  outline: 2px solid #f4e4c8;
+  outline-offset: 4px;
+}
+
+@keyframes title-glow {
+  from {
+    text-shadow:
+      0 2px 4px rgba(0, 0, 0, 0.6),
+      0 0 40px rgba(255, 200, 120, 0.35),
+      0 0 80px rgba(255, 160, 60, 0.2);
+  }
+  to {
+    text-shadow:
+      0 2px 4px rgba(0, 0, 0, 0.6),
+      0 0 50px rgba(255, 210, 140, 0.5),
+      0 0 100px rgba(255, 170, 70, 0.3);
+  }
+}
