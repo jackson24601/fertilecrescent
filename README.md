@@ -15,7 +15,9 @@ Then visit [http://localhost:8080](http://localhost:8080).
 ## Project Structure
 
 - `index.html` — Landing page with desert scene and "Begin Game" button
-- `intro.html` — Intro screen (placeholder, coming next)
+- `game.html` — Main game screen with the playable board
+- `intro.html` — Intro screen (placeholder)
 - `css/styles.css` — Shared styles
-- `js/scene.js` — Animated canvas desert scene with two rivers
+- `js/scene.js` — Animated canvas desert scene for the landing page
 - `js/landing.js` — Landing page interactions
+- `js/game.js` — Game board renderer (sand, rivers, trees, mountains, huts, villagers)
