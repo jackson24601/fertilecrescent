@@ -12,7 +12,28 @@
 <body>
   <main class="game">
     <canvas id="game-board" aria-label="Fertile Crescent game board"></canvas>
+    <aside class="resource-bar" aria-label="Resources">
+      <ul class="resource-list">
+        <li class="resource" data-resource="stone">
+          <span class="resource-label">Stone</span>
+          <span class="resource-value" id="resource-stone">20</span>
+        </li>
+        <li class="resource" data-resource="wood">
+          <span class="resource-label">Wood</span>
+          <span class="resource-value" id="resource-wood">40</span>
+        </li>
+        <li class="resource" data-resource="food">
+          <span class="resource-label">Food</span>
+          <span class="resource-value" id="resource-food">40</span>
+        </li>
+        <li class="resource" data-resource="labor">
+          <span class="resource-label">Labor</span>
+          <span class="resource-value" id="resource-labor">20</span>
+        </li>
+      </ul>
+    </aside>
   </main>
+  <script src="js/resources.js"></script>
   <script src="js/game.js"></script>
 </body>
 </html>

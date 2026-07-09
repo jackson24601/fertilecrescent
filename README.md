@@ -21,3 +21,4 @@ Then visit [http://localhost:8080](http://localhost:8080).
 - `js/scene.js` — Animated canvas desert scene for the landing page
 - `js/landing.js` — Landing page interactions
 - `js/game.js` — Game board renderer (sand, rivers, trees, mountains, huts, villagers)
+- `js/resources.js` — Player resource state and bottom resource bar (Stone, Wood, Food, Labor)
